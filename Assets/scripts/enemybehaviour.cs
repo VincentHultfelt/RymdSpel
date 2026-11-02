@@ -22,7 +22,7 @@ public class enemybehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        other.gameObject.GetComponent<Laserbehaviour>();
+        
         
         hp = hp - 1;
         if (hp <= 0)
@@ -30,7 +30,7 @@ public class enemybehaviour : MonoBehaviour
           Destroy(gameObject);
         }
       
-        Destroy(other.gameObject);
+        
 
     }
 }

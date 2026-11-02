@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.name == "enemy")
         {
             playerHp = playerHp - 1;
+            PlayerHealthBar.value -= 1; 
             
             if (playerHp <= 0)
             {
@@ -28,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        
         float playerSpeed = 1f;
         if (Input.GetKey(KeyCode.D))
         {
