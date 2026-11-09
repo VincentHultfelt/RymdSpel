@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public int playerHp = 10;
+    public int playerHp = 20;
     public GameObject LaserShot;
     public Slider PlayerHealthBar;
     private void Start()
@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(other.name);
-        if (other.name == "enemy")
+        if (other.tag == "enemy")
         {
             playerHp = playerHp - 1;
             PlayerHealthBar.value -= 1; 

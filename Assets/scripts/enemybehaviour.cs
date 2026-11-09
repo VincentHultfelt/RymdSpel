@@ -5,7 +5,7 @@ public class enemybehaviour : MonoBehaviour
 
     public float speed;
     public int hp = 10;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
 
@@ -28,6 +28,7 @@ public class enemybehaviour : MonoBehaviour
         if (hp <= 0)
         { 
           Destroy(gameObject);
+
         }
       
         
